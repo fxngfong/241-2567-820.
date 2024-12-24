@@ -1,62 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- cls -->
+    <!-- ส่วนนี้ไม่แสดงออกไปที่หน้าจอของ Browser-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+     /* ส่วนนี้คือ css */
+     /*ใช้สำหรับแต่ง (id class)*/
+     @font-face{
+          font-family:'Kanit';
+          src: url('./Kanit/Kanit-Regular.ttf');
+     }
+     body{
+          font-family:'Kanit';
+     } 
+     .container {
+          width: 400px;
+          margin-left: auto;
+          margin-right: auto;
+     }
+     .header {
+          font-size: 30px;
+          text-align: center;
+          margin-bottom: 20px;
+     }
+     .header-form {
+          width: 140px;
+     }
+     .flex {
+          display: flex;
+     }
+     .form-input {
+          margin-bottom: 10px;
+     }
+     input.form, textarea {
+          border: 1px solid black;
+          width: 100%;
+     }
+     .center {
+          text-align: center;
+     }
+     .button {
+          border: 0;
+          width: 100%;
+          height: 40px;
+     }
+     </style>
 </head>
 <body>
-    <!-- Open to web -->
-     <h1>สวัสดี ศิลปากร</h1>
-    <h2>Web technology for Data </h2>
-    <h3>xxx</h3>
-    <h6>xxxxxx</h6>
+     <div class="container">
+          <div class="header">
+               Register form
+          </div>
+          <div class="flex form-input">
+               <div class="header-form">ชื่อ</div>
+               <input class="form" type="text">
+          </div>
+          <div class="flex form-input">
+               <div class="header-form">นามสกุล</div>
+               <input class="form" type="text">  <br>
+          </div>
+          <div class="flex form-input">
+               <div class="header-form">อายุ</div>
+               อายุ <input  class="form"type="number" min="0" max="150">
+          </div>
+     
+     
+          <div class="form-input">
+          เพศ
+          <div>
+            <input name="gender" type="radio"> ชาย
+          </div>
+          <div>
+            <input type="radio"> หญิง
+          </div>
+          <div>
+            <input type="radio"> อื่นๆ
+          </div>
+          </div>
+          <div class="form-input">
+        สิ่งที่สนใจ
+           <div>
+            <input name="hobby" type="checkbox"> เรียน
+          </div>
+          <div>
+            <input name="hobby" type="checkbox"> เล่นเกม
+           </div>
+           <div>
+            <input name="hobby" type="checkbox"> อ่านหนังสือ
+          </div>
+          </div>
+          <div class="form-input">
+        คำอธิบาย
+        <textarea></textarea>
+          </div>
+        <button>ส่งข้อมูล</button>
+     </div>
 
-    <p>Paragrap</p>
-    <p>Paragrap</p>
-    <p>Paragrap</p>
-
-    <div>Paragrap</div>
-    <div>Paragrap</div>
-    <div>Paragrap</div>
-
-    <ul>
-        <li>Coffee</li>
-        <li>Tea</li>
-        <li>Milk</li>
-      </ul>
-      <ol>
-        <li>Coffee</li>
-        <li>Tea</li>
-        <li>Milk</li>
-      </ol>
-      <table>
-        <thead>
-            <tr>
-                <th>firstname</th>
-                <th>firstname</th>
-                <th>firstname</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Maria</td>
-                <td>Maria</td>
-                <td>Maria</td>
-            </tr>
-        </tbody>
-      </table>
-      <a href="https://www.w3schools.com/html/html_links.asp" target="_blank">Visit W3school.com</a>
-      <img 
-      src="https://fastly.picsum.photos/id/237/200/300.jpg?hmac=TmmQSbShHz9CdQm0NkEjx1Dyh_Y984R9LpNrpvH2D_U"
-      width="100px"
-      height="100px"
-      >
-      <section>
-        <h1>WWF</h1>
-        <p>The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the conservation, research and restoration of the environment, formerly named the World Wildlife Fund. WWF was founded in 1961.</p>
-        </section>
-        
+    
+  
+     
 </body>
-</html>
+</html>     

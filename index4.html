@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .test {
+            color: red;
+        }
+        /*ตัวใหญ่ตัวเดียว (ตัวแรก)*/
+        .test::first-letter {
+            font-size: 50px;
+        }/*ตัวใหญ่ตัวเดียว (ตัวแรก)*/
+        .test::before {
+            content: '?';
+        }/*ตัวใหญ่ตัวเดียว (ตัวแรก)*/
+        .test::after {
+            content: '!';
+        }
+    </style>
+</head>
+<body>
+    <div class="test">TestPanupong</div>
+</body>
+</html>

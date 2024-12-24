@@ -1,44 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- cls -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .container .item {
+            background-color: red;
+        }
+        .footer-container .item {
+            background-color: blue;
+        }
+        .main-container > .item {
+            background-color: green;
+            padding: 10px;
+        }
+        .button {
+            background-color: yellow;
+            padding: 10px;
+        }
+        .button.active {
+            background-color: orange;
+            padding: 10px;
+        }
+        .button.danger {
+            background-color: red;
+            padding: 10px;
+        }
+        /*ต้องอยู่ข้างกัน*/
+        .item1 + .item2 {
+            background-color: blue;
+        }
+        /*วิธีการสั่ง*/
+        input[type="text"] {
+            background-color: gray;
+            border: 2px;
+            height: 30px;
+            margin: 2px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Register form</h1>
-    ชื่อ<input type="text"> <br>
-    นามสกุล<input type="text">
-    อายุ<input type="number" min="0" max="150">
-    <div>
-        เพศ
-        <div>
-        <input name="gender" type="radio">ชาย
-        </div>
-        <div>
-            <input name="gender" type="radio">หญิง
-        </div>
-        <div>
-            <input name="gender" type="radio">อื่นๆ
+
+    <!--- 1 item เป็นลูกของ container -->
+    <div class="container">
+        container
+        <div class="item">
+            item
         </div>
     </div>
-    <div>
-        สิ่งที่สนใจ
-        <div>
-        <input name="interest" type="checkbox">เรียน
-        </div>
-        <div>
-            <input name="interest" type="checkbox">เล่นเกม
-        </div>
-        <div>
-            <input name="interest" type="checkbox">อ่านหนังสือ
+
+    <!--- 2 item เป็นลูกของ container แค่ตัวเดียว -->
+    <div class="main-container">
+        container
+        <div class="item">
+            item
+            <div class="item">
+                item1
+            </div>
+            <div class="item">
+                item2
+            </div>
+            <div class="item">
+                item3
+            </div>
         </div>
     </div>
-    <div>
-        คำอธิบายตัวเอง
-        <textarea></textarea>
-    </div>
-    <button>ส่งข้อมูล</button>
+
+    <!--- 3 มี class ที่ติดกัน -->
+    <button class="button">ปุ่ม</button>
+    <button class="button active">ปุ่ม</button>
+    <button class="button danger">ปุ่ม</button>
+
+    <!--- 4 เพื่อนกัน adjacent -->
+    <div class="item1">item1</div>
+    <div class="item2">item2</div>
+
+    <!--- 5 attribute selector -->
+    <input type="text" name="username">
+    <input type="text" name="password">
+    <input type="text" name="email">
+    
 </body>
 </html>
