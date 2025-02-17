@@ -1,0 +1,5 @@
+docker -v
+docker ps
+docker ps --all
+docker run hello-world
+docker rm container
