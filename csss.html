@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .desktop ul {
+            display: flex;
+        }
+        .desktop ul li {
+            padding: 20px;
+        }
+        @media screen and (max-width: 768px) {
+            .desktop {
+                display: none;
+            }
+            .mobile {
+                display: block;
+            }
+            .mobile ul {
+                display: flex;
+            }
+            .mobile ul li {
+                padding: 20px;
+            }
+        }
+        .mobile-menu,
+        .mobile {
+            display: none;
+        }
+        @media screen and (max-width: 768px) {
+            .desktop {
+                display: none;
+            }
+            .mobile-menu {
+                display: block;
+            }
+            .mobile-menu :hover .mobile {
+                display: block;
+            
+        }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="desktop">
+        <ul>
+            <li>home</li>
+            <li>about</li>
+            <li>contact</li>
+        </ul>
+    </div>
+    <div class="mobile-menu">
+        <div>Menu</div>
+    <div>Menu</div>
+    <div class="mobile">
+        <ul>
+            <li>home</li>
+            <li>about</li>
+            <li>contact</li>
+        </ul>
+    </div>
+</body>
+</html>
